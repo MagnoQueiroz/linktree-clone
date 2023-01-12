@@ -18,6 +18,7 @@ body * {
     --stroke-color-hover: rgb(255, 255, 255, 0.7);
     --surface-color-hover: rgba(255, 255, 255, 0.199);
     --switch-bg: url(../images/icons/moon.svg);
+    --highlight-color: rgba(255, 255, 255, 0.2);
 }
 
 .light {
@@ -28,6 +29,7 @@ body * {
     --stroke-color-hover: #000000;
     --surface-color-hover: rgba(0, 0, 0, 0.02);
     --switch-bg: url(../images/icons/sun.svg);
+    --highlight-color: rgba(0, 0, 0, 0.1);
 }
 
 body {
@@ -37,11 +39,14 @@ body {
     background-position: top center;
     background-size: cover;
     /* cobrir tudo o campo de visao, se tivesse container seria do tamanho do body mas o body n tem tamanho definido ainda WH e Wh */
+
+    height: 100vh;
 }
 
 .container {
-    /* alinha o conteudo ao centro da caixa */
-    width: 360px;
+    /* remove 360px add 100%*/
+    width: 100%;
+    max-width: 588px;
     /* auto = o ele proprio faz o calculo das laterais centralizando o item no meio da tela (ignorando cima e baixo =0px) */
 
     /* 50px */
@@ -98,6 +103,14 @@ span {
     left: 0px;
     transform: translateY(-50%);
     top: 50%;
+
+    animation: slide-right 0.3s;
+
+    transition: background 0.2s;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -112,8 +125,7 @@ span {
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-left 0.3s forwards;
 }
 
 ul {
@@ -161,7 +173,38 @@ ion-icon {
     font-size: 16px;
 }
 footer {
-    margin-top: -5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     text-align: center;
+}
+
+/* em sua largura minima de 700px(ou seja a partir do momento q atingir no minimo 700px=> ele muda */
+@media (min-width: 700px) {
+    :root {
+        --background-mode: url(../images/bg-desktop.jpg);
+    }
+
+    .light {
+        --background-mode: url(../images/bg-desktop-light.jpg);
+    }
+}
+
+/* atenção da pra usar porcentagem ao inves de usar o right  */
+
+@keyframes slide-left {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
 }
