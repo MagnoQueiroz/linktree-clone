@@ -11,7 +11,7 @@ body * {
 }
 
 :root {
-    --background-mode: url(../images/bg-mobile.jpg);
+    --background-mode: url(../images/background/bg-mobile.jpg);
     --text-color: #ffffff;
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.05);
@@ -22,7 +22,7 @@ body * {
 }
 
 .light {
-    --background-mode: url(../images/bg-mobile-light.jpg);
+    --background-mode: url(../images/background/bg-mobile-light.jpg);
     --text-color: #000000;
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.05);
@@ -180,11 +180,11 @@ footer {
 /* em sua largura minima de 700px(ou seja a partir do momento q atingir no minimo 700px=> ele muda */
 @media (min-width: 700px) {
     :root {
-        --background-mode: url(../images/bg-desktop.jpg);
+        --background-mode: url(../images/background/bg-desktop.jpg);
     }
 
     .light {
-        --background-mode: url(../images/bg-desktop-light.jpg);
+        --background-mode: url(../images/background/bg-desktop-light.jpg);
     }
 }
 
