@@ -43,6 +43,8 @@ body {
     /* alinha o conteudo ao centro da caixa */
     width: 360px;
     /* auto = o ele proprio faz o calculo das laterais centralizando o item no meio da tela (ignorando cima e baixo =0px) */
+
+    /* 50px */
     margin: 50px auto 0;
 }
 
@@ -72,6 +74,47 @@ span {
     font-family: "Roboto Mono";
     font-size: 16px;
 }
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    background: white;
+    border: 0;
+    border-radius: 50%;
+    background-image: var(--switch-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 9999px;
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
 
 ul {
     list-style: none;
@@ -118,60 +161,7 @@ ion-icon {
     font-size: 16px;
 }
 footer {
-    margin-top: px;
+    margin-top: -5px;
+    margin-bottom: 15px;
     text-align: center;
-}
-/* footer span {
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text-color);
-} */
-/*
-footer span:hover {
-    color: #00082f;
-}
-
-.icon {
-    color: white;
-} */
-#switch {
-    position: relative;
-    width: 64px;
-    margin: 4px auto;
-}
-
-#switch button {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 32px;
-    height: 32px;
-    background: white;
-    border: 0;
-    border-radius: 50%;
-    background-image: var(--switch-bg);
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    z-index: 1;
-    left: 0px;
-    transform: translateY(-50%);
-    top: 50%;
-}
-
-#switch span {
-    display: block;
-    width: 64px;
-    height: 24px;
-    background-color: var(--surface-color);
-    border: 1px solid var(--stroke-color);
-    border-radius: 9999px;
-    -webkit-backdrop-filter: blur(4px);
-}
-
-.light #switch button {
-    right: 0;
-    left: initial;
 }
