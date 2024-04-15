@@ -2,7 +2,11 @@
 # Linktree clone
 
 Um clone do Linktree listando redes de contatos do usuario em questão.
+<br>
+### projeto feito em: 
 
+- html5
+- css3
 
 ## Imagens do projeto 
 
@@ -16,9 +20,8 @@ Um clone do Linktree listando redes de contatos do usuario em questão.
 
 ## Melhorias
 
-O projeto agora conta com um sistema de tema tanto quanto Light quanto o Dark
-
-
+- O projeto agora conta com um sistema de tema tanto quanto Light quanto o Dark
+- 
 ## Autores
 
 - [@syxnther](https://github.com/synxther)
